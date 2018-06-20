@@ -1,7 +1,29 @@
-*{
+/*
+colors: Light blue:
+light Blue: #19B5FE
+Dark Blue: #0670E8
+*/
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
-    font-family: Lato, sans-serif
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    background-image:linear-gradient(
+        to right, 
+        rgb(126,213,111,0.6), 
+        rgb(40,180,131,0.6)), 
+        url(../assets/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0,100% 0, 100% 75%, 0 100%);
 }
