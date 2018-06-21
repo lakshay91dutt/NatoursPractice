@@ -13,25 +13,26 @@ Dark Blue: #0670E8
 }
 
 /* Default properties of all the body elements */
+
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    padding: 50px;
+    padding: 28px;
     line-height: 1.7
 }
 
 .header {
-    height: 95vh;
-    
+    height: 93.5vh;
+
     /*    linear-gradient -> color effect in the specified direction */
     background-image: linear-gradient( to right, rgb(126, 213, 111, 0.8), rgb(40, 180, 131, 0.8)), url(../assets/hero.jpg);
-    
+
     background-size: cover;
     background-position: center;
-    
+
     /*    shaping the background image*/
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-    
+
     position: relative;
 }
 
@@ -46,6 +47,7 @@ body {
 
 .text-box {
     position: absolute;
+    text-align: center;
     color: #ffffff;
     text-transform: uppercase;
     top: 40%;
@@ -54,49 +56,46 @@ body {
 }
 
 /*Main-heading in the heading-text-box*/
+
 .text-box-primaryT {
     display: block;
-    font-size: 60px;
+    font-size: 58px;
     letter-spacing: 30px;
     font-weight: 500;
-    animation: moveToRight 5s ease-in-out;
+    animation: moveToRight 2s ease-in-out;
 }
 
 /*Sub-heading in the heading-text-box*/
+
 .text-box-subT {
     display: block;
-    font-size: 22px;
+    font-size: 1rem;
     letter-spacing: 17px;
     font-weight: 600;
-    animation: moveToLeft 3s ease-in-out;
+    animation: moveToLeft 2s ease-in-out;
+    margin-bottom: 50px;
 }
 
 /*Heading animation*/
+
 @keyframes moveToRight {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-100px);
     }
     50% {
-        transform: translate(300px);
+        transform: translate(100px);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
 /*Heading animation*/
+
 @keyframes moveToLeft {
-    0%{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}   0% {
+    0% {
         opacity: 0;
         transform: translateX(100px);
     }
