@@ -12,37 +12,47 @@ Dark Blue: #0670E8
     box-sizing: border-box;
 }
 
-/* Default properties of all the body elements */
+html {
+    /*
+    Default font size of browsers is 16px...to use this completely, i.e if the fontSize is changed
+    by the user then other elements will adapt the change => font-size: 100%
+    Our *custom* font size is 10px...to use it completely => 10/16 * 100 = 62.5%
+    */
+    font-size: 62.5%;
+    /* 62.5% = 10px which is the root font size*/
+}
 
+/* Default properties of all the body elements */
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    padding: 28px;
+    /* 1rem = 10px */
+    padding: 2.8rem;
     line-height: 1.7
 }
 
 .header {
-    height: 93.5vh;
+    height: 95vh;
 
     /*    linear-gradient -> color effect in the specified direction */
-    background-image: linear-gradient( to right, rgb(126, 213, 111, 0.8), rgb(40, 180, 131, 0.8)), url(../assets/hero.jpg);
+    background-image: linear-gradient( to left, rgb(126, 213, 111, 0.8), rgb(40, 180, 131, 0.8)), url(../assets/hero.jpg);
 
     background-size: cover;
-    background-position: center;
+    background-position: top;
 
     /*    shaping the background image*/
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
     position: relative;
 }
 
 .logo-box {
     position: relative;
-    padding: 40px;
+    padding: 4rem;
 }
 
 .logo {
-    height: 38px;
+    height: 3.8rem;
 }
 
 .text-box {
@@ -56,28 +66,25 @@ body {
 }
 
 /*Main-heading in the heading-text-box*/
-
 .text-box-primaryT {
     display: block;
-    font-size: 58px;
-    letter-spacing: 30px;
+    font-size: 5.8rem;
+    letter-spacing: 3rem;
     font-weight: 500;
     animation: moveToRight 2s ease-in-out;
 }
 
 /*Sub-heading in the heading-text-box*/
-
 .text-box-subT {
     display: block;
-    font-size: 1rem;
-    letter-spacing: 17px;
+    font-size: 1.8rem;
+    letter-spacing: 1.7rem;
     font-weight: 600;
     animation: moveToLeft 2s ease-in-out;
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
 }
 
-/*Heading animation*/
-
+/*Primary Heading animation*/
 @keyframes moveToRight {
     0% {
         opacity: 0;
@@ -92,7 +99,7 @@ body {
     }
 }
 
-/*Heading animation*/
+/*Sub-Heading animation*/
 
 @keyframes moveToLeft {
     0% {
@@ -115,20 +122,24 @@ body {
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 15px;
-    padding: 18px 34px;
-    border-radius: 150px;
+    font-size: 1.5rem;
+    padding: 1.8rem 3.4rem;
+    border-radius: 15rem;
     transition: 0.2s;
  }
 .btn:hover {
-    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem .5rem rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
 }
 .btn:active {
     transform: translateZ(1px);
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
 }
 .btn-white {
     background-color: #ffffff;
     color: #777777;
+}
+.btn::after {
+    content: "";
+    display: inline-block;
 }
