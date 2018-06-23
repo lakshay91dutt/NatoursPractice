@@ -1,11 +1,15 @@
 /*
-colors: Light blue:
-light Blue: #19B5FE
-Dark Blue: #0670E8
+    Notes: Using Block Element Modifier(BEM)
+    Block Component => .btn {}
+    Element that depends upon the block => .btn__price {}
+    Modifier, that changes the style of a block => .btn--big {}
+
+    colors: Light blue:
+    light Blue: #19B5FE
+    Dark Blue: #0670E8
 */
 
 /*Normalizing*/
-
 * {
     margin: 0;
     padding: 0;
@@ -14,27 +18,31 @@ Dark Blue: #0670E8
 
 html {
     /*
-    Default font size of browsers is 16px...to use this completely, i.e
+    Using "px" is a bad practice + static design
+    Other units like "rem" + "em" + "%" are use to make dynamic designs
+    Default font size of browsers is 16px...to use this completely => font-size: 100%
+    Our *custom* font size is 10px...to use it completely, i.e
      if the fontSize is changed by the user then other elements will adapt
-     the change => font-size: 100%
-    Our *custom* font size is 10px...to use it completely => 10/16 * 100 = 62.5%
+     the change  => 10/16 * 100 = 62.5%
     */
     font-size: 62.5%;
-    /* 62.5% = 10px which is the root font size*/
+    /* 
+        62.5% = 10px which is the root font size
+        1rem = 10px
+    */
 }
 
 /* Default properties of all the body elements */
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    /* 1rem = 10px */
     padding: 2.8rem;
     line-height: 1.7
 }
 
 .header {
     height: 95vh;
-
+    
     /*    linear-gradient -> color effect in the specified direction */
     background-image: linear-gradient( to left, rgb(126, 213, 111, 0.8)
     ,rgb(40, 180, 131, 0.8)), url(../assets/hero.jpg);
@@ -48,27 +56,31 @@ body {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     position: relative;
     padding: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.8rem;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
-    text-align: center;
-    color: #ffffff;
-    text-transform: uppercase;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-/*Main-heading in the heading-text-box*/
-.text-box-primaryT {
+/*Main-heading in the header__text-box*/
+.heading-primary {
+    color: #ffffff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+.heading-primary--main {
     display: block;
     font-size: 5.8rem;
     letter-spacing: 3rem;
@@ -77,7 +89,7 @@ body {
 }
 
 /*Sub-heading in the heading-text-box*/
-.text-box-subT {
+.heading-primary--sub {
     display: block;
     font-size: 1.8rem;
     letter-spacing: 1.7rem;
@@ -102,7 +114,6 @@ body {
 }
 
 /*Sub-Heading animation*/
-
 @keyframes moveToLeft {
     0% {
         opacity: 0;
@@ -118,7 +129,6 @@ body {
 }
 
 /* Modifying the button */
-
 .btn:link,
 .btn:visited {
     display: inline-block;
@@ -137,7 +147,7 @@ body {
     transform: translateZ(1px);
     box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
 }
-.btn-white {
+.btn--white {
     background-color: #ffffff;
     color: #777777;
 }

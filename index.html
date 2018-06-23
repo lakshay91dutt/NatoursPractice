@@ -1,3 +1,9 @@
+<!--
+    Notes: Using Block Element Modifier(BEM)
+    Block Component => .btn {}
+    Element that depends upon the block => .btn__price {}
+    Modifier, that changes the style of a block => .btn--big {}
+-->
 <!Doctype Html>
 <html>
     <head>
@@ -10,17 +16,23 @@
 <body>
     <!--   Since the webpage will be accessed by scrolling through the elements, therefore main page is defined as a header-->
     <header class="header">
-        <div class="logo-box">
+        <div class="header__logo-box">
             <!--     To manipulate the attributes of image .logo is defined -->
-            <img src="assets/logo-white.png" class="logo">
+            <img src="assets/logo-white.png" class="header__logo">
         </div>
         <!--     Wrapping the heading around a div block to position all of the elements in the center of page-->
-        <div class="text-box">
-            <!--     MainHeading-->
-            <span class="text-box-primaryT">Outdoors</span>
-            <!--     SubHeading-->
-            <span class="text-box-subT">is where life happens</span>
-            <a href="#" class="btn btn-white">Discover our tours</a>
+        <div class="header__text-box">
+            <!-- 
+                Header is not included here(in class of h1) to make heading an individual
+                block component, which can be utilized in other areas as well
+            -->
+            <h1 class="heading-primary">
+                <!-- MainHeading modifiers (main & sub)-->
+                <span class="heading-primary--main">Outdoors</span>
+                <!--     SubHeading-->
+                <span class="heading-primary--sub">is where life happens</span>
+            </h1>
+            <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
     </header>
 </body>
