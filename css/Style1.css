@@ -14,8 +14,9 @@ Dark Blue: #0670E8
 
 html {
     /*
-    Default font size of browsers is 16px...to use this completely, i.e if the fontSize is changed
-    by the user then other elements will adapt the change => font-size: 100%
+    Default font size of browsers is 16px...to use this completely, i.e
+     if the fontSize is changed by the user then other elements will adapt
+     the change => font-size: 100%
     Our *custom* font size is 10px...to use it completely => 10/16 * 100 = 62.5%
     */
     font-size: 62.5%;
@@ -35,7 +36,8 @@ body {
     height: 95vh;
 
     /*    linear-gradient -> color effect in the specified direction */
-    background-image: linear-gradient( to left, rgb(126, 213, 111, 0.8), rgb(40, 180, 131, 0.8)), url(../assets/hero.jpg);
+    background-image: linear-gradient( to left, rgb(126, 213, 111, 0.8)
+    ,rgb(40, 180, 131, 0.8)), url(../assets/hero.jpg);
 
     background-size: cover;
     background-position: top;
